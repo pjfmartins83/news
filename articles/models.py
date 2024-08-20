@@ -4,10 +4,9 @@ from django.urls import reverse
 from markdownx.models import MarkdownxField
 
 
-class Article(models.Model):
-    content = MarkdownxField()
+class Article(models.Model):    
     title = models.CharField(max_length=255)
-    body = models.TextField()
+    body = MarkdownxField(default="")
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,

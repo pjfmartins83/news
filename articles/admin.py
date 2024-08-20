@@ -16,8 +16,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(MarkdownxModelAdmin):
-    list_display = ('title', 'created_at')
+    pass
 
 
-admin.site.register(Article)
 admin.site.register(Comment)
